@@ -1,0 +1,1 @@
+A PHP-FPM container for [Kayako](https://www.kayako.com/) built on top of [php:5.6-fpm-alpine](https://github.com/docker-library/php/blob/f016f5dc420e7d360f7381eb014ac6697e247e11/5.6/fpm/alpine/Dockerfile).
