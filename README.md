@@ -4,7 +4,7 @@ This image is not designed to work in standalone mode. ([Dockerfile](https://git
 
 # Usage
 
-Create a Dockerfile to `COPY` your own Kayako's files into `/srv/web` or use a `--volume`.
+Create a Dockerfile to `COPY` your own Kayako's files into `/srv/web` or simply use a `--volume`.
 
 Recommended configuration:
 ```yaml
@@ -31,6 +31,10 @@ Recommended configuration:
         restart: always
         network_mode: "default"
 ```
+
+## PHP Configuration
+
+If you want to customise your PHP configuration, you just have to `COPY` your `.ini` file into `/usr/local/etc/php/conf.d/`. It will override the default configuration.
 
 # Documentation
 
