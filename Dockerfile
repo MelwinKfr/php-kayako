@@ -12,4 +12,7 @@ COPY php.ini /usr/local/etc/php/php.ini
 
 VOLUME /srv/web
 
-CMD /bin/sh -c "chown -R www-data /srv/web; php-fpm;"
+CMD /bin/sh -c "chown -R www-data /srv/web; \
+                chmod 777 /srv/web/__swift/files /srv/web/__swift/cache /srv/web/__swift/geoip /srv/web/__swift/logs /srv/web/__apps; \
+                chmod 755 /srv/web/console/index.php; \
+                php-fpm;"
