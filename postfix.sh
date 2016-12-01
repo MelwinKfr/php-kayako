@@ -11,3 +11,7 @@ fi
 if [[ $HEADER_CHECKS != '' ]]; then
     postconf -e header_checks=$HEADER_CHECKS
 fi
+
+if [[ $MSG_SIZE_LIMIT != '' ]]; then
+    postconf -e message_size_limit=$MSG_SIZE_LIMIT
+fi

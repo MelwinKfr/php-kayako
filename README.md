@@ -52,6 +52,7 @@ Variable name | Documentation
 RELAY_HOST    | [relayhost](http://www.postfix.org/postconf.5.html#relayhost)
 ALWAYS_BCC    | [always_bcc](http://www.postfix.org/postconf.5.html#always_bcc)
 HEADER_CHECKS | [header_checks](http://www.postfix.org/postconf.5.html#header_checks)
+MSG_SIZE_LIMIT| [message_size_limit](http://www.postfix.org/postconf.5.html#message_size_limit)
 
 # Documentation
 
