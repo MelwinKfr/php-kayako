@@ -8,8 +8,11 @@ RUN apk add --no-cache libxml2-dev libmcrypt-dev libpng-dev freetype-dev curl-de
     && docker-php-ext-configure mysql --with-mysql=mysqlnd \
     && docker-php-ext-configure mysqli --with-mysqli=mysqlnd \
     && docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
-    && docker-php-ext-install mbstring mcrypt curl gd mysql mysqli pdo pdo_mysql xml simplexml filter json imap sockets dom ldap opcache \
+    && docker-php-ext-install mbstring mcrypt curl gd pdo pdo_mysql xml simplexml json imap sockets dom ldap opcache \
     && chmod +x /home/www-data/postfix.sh
+
+#For some controllers like /admin/index.php?/Base/Database/TableInfo among others
+RUN docker-php-ext-install mysqli
 
 COPY php.ini /usr/local/etc/php/php.ini
 
