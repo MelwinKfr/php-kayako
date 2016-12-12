@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Disable SMTPUTF8, because libraries (ICU) are missing in alpine
+postconf -e smtputf8_enable=no
+
 if [[ $RELAY_HOST != '' ]]; then
     postconf -e relayhost=$RELAY_HOST
 fi
