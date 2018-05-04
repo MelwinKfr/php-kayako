@@ -20,6 +20,12 @@ WORKDIR /srv/web
 
 COPY kayako.sh /usr/local/bin
 
+ENV KAYAKO_BASENAME 'index.php?'
+ENV KAYAKO_DB_HOSTNAME 'mysql_host'
+ENV KAYAKO_DB_USERNAME 'mysql_user'
+ENV KAYAKO_DB_PASSWORD 'mysql_pwd'
+ENV KAYAKO_DB_NAME 'kayako_db'
+ENV KAYAKO_DB_PORT '3306'
 
 EXPOSE 80 443
 
